@@ -1,6 +1,6 @@
 import unittest
-import calci
-from calci import add, subtract, multiply
+import pycalculator
+from pycalculator import add, subtract, multiply
 
 
 class MyTestCase(unittest.TestCase):
