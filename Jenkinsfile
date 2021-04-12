@@ -49,22 +49,9 @@ pipeline {
         }
         stage('Deliver') {
             agent any
-            environment {
-                VOLUME = '$/var/jenkins_home/src/'
-                IMAGE = 'cdrx/pyinstaller-linux:python2'
-            }
             steps {
-                dir(path: env.BUILD_ID) {
-                    unstash(name: 'compiled-results')
-                    sh "docker run --rm -v ${VOLUME} ${IMAGE} 'pyinstaller -F pycalculator.py'"
+                    echo "Successfully tested the application"
                 }
-            }
-            post {
-                success {
-                    archiveArtifacts "${env.BUILD_ID}/dist/pycalculator"
-                    sh "docker run --rm -v ${VOLUME} ${IMAGE} 'rm -rf build dist'"
-                }
-            }
         }
     }
 }  
