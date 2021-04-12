@@ -61,7 +61,7 @@ pipeline {
             }
             post {
                 success {
-                    archiveArtifacts "${env.BUILD_ID}/sources/dist/pycalculator"
+                    archiveArtifacts "${env.BUILD_ID}/dist/pycalculator"
                     sh "docker run --rm -v ${VOLUME} ${IMAGE} 'rm -rf build dist'"
                 }
             }
