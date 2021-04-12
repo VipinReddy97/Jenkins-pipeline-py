@@ -56,7 +56,7 @@ pipeline {
             steps {
                 dir(path: env.BUILD_ID) {
                     unstash(name: 'compiled-results')
-                    sh "docker run --rm -v ${VOLUME} ${IMAGE} 'pyinstaller -F pycalculator.py'"
+                    sh "docker run --rm -v ${VOLUME} ${IMAGE} 'pyinstaller -F pycalculator'"
                 }
             }
             post {
