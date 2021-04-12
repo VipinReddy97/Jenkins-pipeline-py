@@ -50,7 +50,7 @@ pipeline {
         stage('Deliver') {
             agent any
             environment {
-                VOLUME = '$/var/jenkins_home/workspace/Pipeline-Dockeragent/17'
+                VOLUME = '$/var/jenkins_home/src'
                 IMAGE = 'cdrx/pyinstaller-linux:python2'
             }
             steps {
