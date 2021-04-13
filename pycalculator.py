@@ -2,26 +2,28 @@
 
 # This function adds two numbers
 def add(x, y):
-    if x <= 0 or y <= 0:
-        return "Only positive integers allowed in this calculator:"
-    else:
-        return x + y
+    return x + y
+    
+     
 
 
 # This function subtracts two numbers
 def subtract(x, y):
-    if x <= 0 or y <= 0:
-        return "Only positive integers allowed in this calculator:"
-    else:
-        return x - y
+    return x - y
+    
+      
 
 
 # This function multiplies two numbers
 def multiply(x, y):
-    if x <= 0 or y <= 0:
-        return "Only positive integers allowed in this calculator:"
-    else:
-        return x * y
+    return x * y
+
+
+def divide(x,y):
+    try:
+        return x/y
+    except:
+        print("Can't divide with zero")
 
 
 
